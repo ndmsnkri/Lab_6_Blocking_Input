@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class CtoFConverter {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        double celsius, fahrenheit;
+        double celsius = 0.0;
+        double fahrenheit = 0.0;
         boolean done = false;
         do {
             System.out.print("Enter a temperature in Celsius: ");
