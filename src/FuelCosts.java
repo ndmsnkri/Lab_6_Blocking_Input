@@ -72,7 +72,7 @@ public class FuelCosts {
 
         // Calculate and display the distance the car can go with the gas in the tank
         double distance = gallonsInTank * fuelEfficiency;
-        System.out.printf("The car can go approximately %.2f miles with the gas in the tank.%n", distance);
+        System.out.printf("The car can go %.2f miles with the gas in the tank.%n", distance);
 
         in.close();
     }
