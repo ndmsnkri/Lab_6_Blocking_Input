@@ -43,17 +43,22 @@ public class RectangleInfo {
             }
         } while (!done);
 
+        System.out.println();
+
         // area of the rectangle
         double area = width * height;
-        System.out.println("The area of the rectangle is: " + area);
+        String RectArea = "The area of the rectangle is:";
+        System.out.printf("%-25s %11.2f%n", RectArea, area);
 
         // perimeter of the rectangle
         double perimeter = 2 * (width + height);
-        System.out.println("The perimeter of the rectangle is: " + perimeter);
+        String RectPeri = "The perimeter of the rectangle is:";
+        System.out.printf("%-25s %6.2f%n", RectPeri, perimeter);
 
         // length of the diagonal
         double diagonal = Math.sqrt(width * width + height * height);
-        System.out.println("The length of the diagonal is: " + diagonal);
+        String DiagoLength = "The length of the diagonal is:";
+        System.out.printf("%-25s %9.2f%n", DiagoLength, diagonal);
 
     }
 }

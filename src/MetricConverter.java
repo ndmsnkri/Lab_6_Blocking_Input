@@ -6,7 +6,7 @@ public class MetricConverter {
         double meters = 0.0;
         boolean done;
 
-        // Input for the measurement in meters
+        // Input measurement in meters
         do {
             done = true; // Assume valid input
             System.out.print("Enter a measurement in meters: ");
@@ -14,7 +14,7 @@ public class MetricConverter {
             if (in.hasNextDouble()) {
                 meters = in.nextDouble();
                 if (meters < 0) {
-                    System.out.println("Measurement must be non-negative. Please enter a valid value.");
+                    System.out.println("Measurement must be positive. Please enter a valid value.");
                     done = false;
                 }
             } else {
@@ -24,7 +24,7 @@ public class MetricConverter {
             }
         } while (!done);
 
-        // Conversion factors
+        // factors
         double metersToMiles = 0.000621371;
         double metersToFeet = 3.28084;
         double metersToInches = 39.3701;
@@ -35,7 +35,7 @@ public class MetricConverter {
         double inches = meters * metersToInches;
 
         // Display the converted measurements
-        System.out.printf("%.2f meters is equal to %.2f miles%n", meters, miles);
+        System.out.printf("%10s meters is equal to %.2f miles%n", meters, miles);
         System.out.printf("%.2f meters is equal to %.2f feet%n", meters, feet);
         System.out.printf("%.2f meters is equal to %.2f inches%n", meters, inches);
         
