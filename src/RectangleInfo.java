@@ -7,9 +7,9 @@ public class RectangleInfo {
         double height = 0.0;
         boolean done;
 
-        // Input for the width of the rectangle
+        // Input width of the rectangle
         do {
-            done = true; // Assume valid input
+            done = true; // give true value
             System.out.print("Enter the width of the rectangle: ");
 
             if (in.hasNextDouble()) {
@@ -25,9 +25,9 @@ public class RectangleInfo {
             }
         } while (!done);
 
-        // Input for the height of the rectangle
+        // Input of the rectangle
         do {
-            done = true; // Assume valid input
+            done = true; // give true value
             System.out.print("Enter the height of the rectangle: ");
 
             if (in.hasNextDouble()) {
@@ -43,18 +43,17 @@ public class RectangleInfo {
             }
         } while (!done);
 
-        // Calculate and display the area of the rectangle
+        // area of the rectangle
         double area = width * height;
         System.out.println("The area of the rectangle is: " + area);
 
-        // Calculate and display the perimeter of the rectangle
+        // perimeter of the rectangle
         double perimeter = 2 * (width + height);
         System.out.println("The perimeter of the rectangle is: " + perimeter);
 
-        // Calculate and display the length of the diagonal using the Pythagorean theorem
+        // length of the diagonal
         double diagonal = Math.sqrt(width * width + height * height);
         System.out.println("The length of the diagonal is: " + diagonal);
 
-        in.close();
     }
 }
