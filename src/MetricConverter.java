@@ -35,9 +35,9 @@ public class MetricConverter {
         double inches = meters * metersToInches;
 
         // Display the converted measurements
-        System.out.printf("%10s meters is equal to %.2f miles%n", meters, miles);
-        System.out.printf("%.2f meters is equal to %.2f feet%n", meters, feet);
-        System.out.printf("%.2f meters is equal to %.2f inches%n", meters, inches);
+        System.out.printf("%.2f meters is equal to %10.2f miles%n", meters, miles);
+        System.out.printf("%.2f meters is equal to %10.2f feet%n", meters, feet);
+        System.out.printf("%.2f meters is equal to %10.2f inches%n", meters, inches);
         
     }
 }
