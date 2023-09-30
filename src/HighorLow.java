@@ -4,47 +4,44 @@ import java.util.Scanner;
 public class HighorLow {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        Random random = new Random();
+        Random generator = new Random();
 
-        int min = 1;
-        int max = 10;
-        int randomNumber = random.nextInt(max - min + 1) + min;
+        int val = generator.nextInt(10 ) + 1;
         int userGuess = 0;
-        boolean validInput;
+        boolean done;
 
         System.out.println("Welcome to the Number Guessing Game!");
         System.out.println("I've selected a random number between 1 and 10 (inclusive).");
 
-        // Input for the user's guess
+        // user's guess
         do {
-            validInput = true; // Assume valid input
+            done = true; // Assume valid input
             System.out.print("Guess the number: ");
 
             if (in.hasNextInt()) {
                 userGuess = in.nextInt();
-                if (userGuess < min || userGuess > max) {
+                if (userGuess < 1 || userGuess > 10) {
                     System.out.println("Please enter a number between 1 and 10.");
-                    validInput = false;
+                    done = false;
                 }
             } else {
                 System.out.println("Invalid input. Please enter a valid number between 1 and 10.");
                 in.nextLine(); // Clear the invalid input
-                validInput = false;
+                done = false;
             }
-        } while (!validInput);
+        } while (!done);
 
-        // Display the random number
-        System.out.printf("The random number was: %d%n", randomNumber);
+        // Display random number
+        System.out.printf("The random number was: %d%n", val);
 
-        // Check if the user's guess is correct and provide feedback
-        if (userGuess == randomNumber) {
+        // Check if the user's guess is correct and provide prints
+        if (userGuess == val) {
             System.out.println("Congratulations! You guessed the correct number!");
-        } else if (userGuess < randomNumber) {
+        } else if (userGuess < val) {
             System.out.println("Sorry, your guess is too low.");
         } else {
             System.out.println("Sorry, your guess is too high.");
         }
 
-        in.close();
     }
 }
